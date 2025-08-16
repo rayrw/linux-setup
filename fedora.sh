@@ -61,3 +61,7 @@ if [ ! -d ~/Developer/rayrw/dotfiles ]; then
 fi
 
 gsettings set org.gnome.shell favorite-apps "['app.zen_browser.zen.desktop', 'org.mozilla.Thunderbird.desktop', 'Alacritty.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop']"
+
+sudo dnf copr enable -y jdxcode/mise
+sudo dnf install -y mise
+echo 'eval "$(mise activate zsh)"' >>"${ZDOTDIR-$HOME}/.zshrc"
